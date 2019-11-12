@@ -19,7 +19,7 @@ nvm install v8.11.0
 nvm alias default v8.11.0
 
 # Install the AWS Amplify CLI
-npm install -g @aws-amplify/cli@1.12.0
+npm install -g @aws-amplify/cli
 
 # Install jq
 sudo yum install jq -y
@@ -31,12 +31,12 @@ These commands will take a few minutes to finish.
 
 ### Configuring a default region 
 
-A best practice is to deploy your infrastructure close to your customers, let's configure a default AWS region for this workshop : Northern Virginia (*us-east-1*) for North America or Ireland (*eu-west-1*) for Europe.
+A best practice is to deploy your infrastructure close to your customers, let's configure a default AWS region for this workshop: US East (N. Virginia) (*us-east-1*) for North America or EU (Ireland) (*eu-west-1*) for Europe.
 
 **Create an AWS config file**, run:
 
 {{% tabs %}}
-{{% tab "us-east-1" "Virginia" %}}
+{{% tab "us-east-1" "US East (N. Virginia)" %}}
 ```bash
 cat <<END > ~/.aws/config
 [default]
@@ -45,7 +45,7 @@ END
 ```
 {{% /tab %}}
 
-{{% tab "us-west-2" "Oregon" %}}
+{{% tab "us-west-2" "US West (Oregon)" %}}
 ```bash
 cat <<END > ~/.aws/config
 [default]
@@ -54,7 +54,7 @@ END
 ```
 {{% /tab %}}
 
-{{% tab "eu-west-1" "Ireland" %}}
+{{% tab "eu-west-1" "EU (Ireland)" %}}
 ```bash
 cat <<END > ~/.aws/config
 [default]
@@ -63,7 +63,16 @@ END
 ```
 {{% /tab %}}
 
-{{% tab  "ap-southeast-1"  "Singapore" %}}
+{{% tab "eu-central-1" "EU (Frankfurt)" %}}
+```bash
+cat <<END > ~/.aws/config
+[default]
+region=eu-central-1
+END
+```
+{{% /tab %}}
+
+{{% tab  "ap-southeast-1"  "Asia Pacific (Singapore)" %}}
 ```bash
 cat <<END > ~/.aws/config
 [default]
