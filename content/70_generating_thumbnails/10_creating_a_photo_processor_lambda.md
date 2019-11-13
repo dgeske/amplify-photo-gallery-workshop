@@ -397,6 +397,7 @@ exports.handler = async (event, context, callback) => {
 </div>
 
 9. The Cloud Formation template you just pasted above contains some placeholder text that needs to be replaced with values specific for your environment. **Run the following commands** on the terminal of your Cloud9 IDE from the same **photoalbums** directory you've been working on:
+
 	```bash
 	AMPLIFY_ENV=$(jq -r '.envName' amplify/.config/local-env-info.json)
 
